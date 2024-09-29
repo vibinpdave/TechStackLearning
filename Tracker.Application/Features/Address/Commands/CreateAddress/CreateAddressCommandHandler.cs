@@ -44,7 +44,7 @@ namespace Tracker.Application.Features.Address.Commands.CreateAddress
             var validationResult = await validator.ValidateAsync(request);
 
             if (validationResult.Errors.Any())
-                throw new BadRequestException("Invalid Adress Details", validationResult);
+                throw new BadRequestException("Invalid Address Details", validationResult);
 
             var address = _mapper.Map<Tracker.Domain.Address>(request);
 
